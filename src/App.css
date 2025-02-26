@@ -1,8 +1,10 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
   text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
 }
 
 .logo {
@@ -18,25 +20,80 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
 
-.card {
-  padding: 2em;
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.read-the-docs {
-  color: #888;
+.App-header {
+  background-color: #282c34;
+  width: 100%;
+  padding: 20px;
+  color: white;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.playing-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #000;
+}
+
+.scores {
+  margin-top: 20px;
+  color: white;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+.playing-card.winner {
+  background-color: #417143;
+  color: white;
+}
+
+.playing-card.loser {
+  background-color: #764542;
+  color: white;
+}
+
+.playing-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #000;
 }
